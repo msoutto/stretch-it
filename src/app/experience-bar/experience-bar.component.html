@@ -1,13 +1,8 @@
-<div class="container">
-<mat-grid-list cols="8">
-    <mat-grid-tile [colspan]="1">
-        <span>0 xp</span>
-    </mat-grid-tile>
-    <mat-grid-tile [colspan]="6">
-        <mat-progress-bar mode="determinate" value="40"></mat-progress-bar>
-    </mat-grid-tile>
-    <mat-grid-tile [colspan]="1">
-        <span>600 xp</span>
-    </mat-grid-tile>
-</mat-grid-list>
-</div>
+<header class="experience-bar">
+    <span>0 xp</span>
+    <div>
+        <mat-progress-bar mode="determinate" value="{{progress}}"></mat-progress-bar>
+        <span class="current-experience" style="left: {{progress}}%">300 xp</span>
+    </div>
+    <span>600 xp</span>
+</header>

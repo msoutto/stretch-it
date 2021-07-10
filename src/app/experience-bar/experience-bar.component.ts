@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ExperienceBarComponent implements OnInit {
 
+  progress: Number = 50;
+
   constructor() { }
 
   ngOnInit(): void {

@@ -11,8 +11,18 @@
 .experience-bar > div {
     flex: 1;
     height: 4px;
-    border-radius: 4px;
     background: var(--background);
     margin: 0 1.5rem;
     position: relative;
+
+    mat-progress-bar {
+        border-radius: 4px;
+    }
+}
+
+
+span.current-experience {
+    position: absolute;
+    top: 12px;
+    transform: translateX(-50%);
 }
