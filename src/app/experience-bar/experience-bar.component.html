@@ -1,8 +1,8 @@
 <header class="experience-bar">
-    <span>0 xp</span>
+    <span>{{minExp}}</span>
     <div>
         <mat-progress-bar mode="determinate" value="{{progress}}"></mat-progress-bar>
-        <span class="current-experience" style="left: {{progress}}%">300 xp</span>
+        <span class="current-experience" style="left: {{progress}}%">{{curExp}} xp</span>
     </div>
-    <span>600 xp</span>
+    <span>{{maxExp}}</span>
 </header>
