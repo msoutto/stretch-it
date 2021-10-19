@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class ExperienceBarComponent implements OnInit {
   minExp: number = 0;
   maxExp: number = 600;
-  curExp: number = 600;
+  curExp: number = 300;
   progress: number = 0;
 
   constructor() { }
