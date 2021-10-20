@@ -9,12 +9,16 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatIconModule } from '@angular/material/icon';
 import { ExperienceBarComponent } from './experience-bar/experience-bar.component';
 import { ProfileComponent } from './profile/profile.component';
+import { CompletedChallengesComponent } from './completed-challenges/completed-challenges.component';
+import { CountdownComponent } from './countdown/countdown.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ExperienceBarComponent,
-    ProfileComponent
+    ProfileComponent,
+    CompletedChallengesComponent,
+    CountdownComponent
   ],
   imports: [
     BrowserModule,
