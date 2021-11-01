@@ -1,11 +1,17 @@
-<div class="countdown-container">
-    <div>
-        <span>2</span>
-        <span>5</span>
+<div>
+    <div class="countdown-container">
+        <div>
+            <span>{{paddedMinutes[0]}}</span>
+            <span>{{paddedMinutes[1]}}</span>
+        </div>
+        <span>:</span>
+        <div>
+            <span>{{paddedSeconds[0]}}</span>
+            <span>{{paddedSeconds[1]}}</span>
+        </div>
     </div>
-    <span>:</span>
-    <div>
-        <span>0</span>
-        <span>0</span>
-    </div>
+
+    <button type="button" class="countdown-button" (click)="startCountdown()">
+        Iniciar um ciclo
+    </button>
 </div>
