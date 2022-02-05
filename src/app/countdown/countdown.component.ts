@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { timer } from 'rxjs';
 
 const initialTime: number = 0.1 * 60;
+let interval: any; //NodeJS.Timeout;
 
 @Component({
   selector: 'app-countdown',
@@ -11,8 +12,8 @@ const initialTime: number = 0.1 * 60;
 export class CountdownComponent implements OnInit {
   // Time in seconds
   time: number = initialTime;
-  active: boolean = false;
-  interval: any;
+  isActive: boolean = false;
+  hasFinished: boolean = false;
 
   minutes: number = Math.floor(this.time / 60);
   seconds: number = this.time % 60;
@@ -26,18 +27,27 @@ export class CountdownComponent implements OnInit {
   }
 
   startCountdown(): void {
-    this.active = true;
-    this.interval = setInterval(() => {
-      if (this.time > 0) {
-        this.time--;
-      }
-      else {
-        this.time = initialTime;
-        this.active = false;
-        clearInterval(this.interval);
-      }
+    this.isActive = true;
+    this.waitInterval();
+  }
 
-      this.updateCounters();
+  resetCountdown(): void {
+    clearInterval(interval);
+    this.isActive = false;
+    this.time = initialTime;
+    this.updateCounters();
+  }
+
+  waitInterval(): void {
+    interval = setInterval(() => {
+      if (this.isActive && this.time > 0) {
+        this.time--;
+        this.updateCounters();
+      }
+      else if (this.isActive && this.time === 0) {
+        this.hasFinished = true;
+        this.isActive = false;
+      }
     }, 1000);
   }
 

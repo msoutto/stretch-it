@@ -11,7 +11,13 @@
         </div>
     </div>
 
-    <button type="button" class="countdown-button" (click)="startCountdown()">
+    <button disabled *ngIf="hasFinished && !isActive" class="countdown-button">
+        Ciclo encerrado
+    </button>
+    <button type="button" *ngIf="!hasFinished && isActive" class="countdown-button countdown-button-active" (click)="resetCountdown()">
+        Abandonar ciclo
+    </button>
+    <button type="button" *ngIf="!hasFinished && !isActive" class="countdown-button" (click)="startCountdown()">
         Iniciar um ciclo
     </button>
 </div>

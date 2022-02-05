@@ -59,6 +59,23 @@
     transition: background-color 0.2s;
 }
 
-.countdown-button:hover {
+.countdown-button:not(:disabled):hover {
     background: var(--blue-dark);
+}
+
+.countdown-button-active {
+    background: var(--white);
+    color: var(--title);
+}
+
+.countdown-button-active:not(:disabled):hover {
+    background: var(--red);
+    color: var(--white);
+}
+
+// Ciclo encerrado
+.countdown-button:disabled {
+    background: var(--white);
+    color: var(--text);
+    cursor: not-allowed;
 }
