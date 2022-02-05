@@ -1,0 +1,24 @@
+<div class="challenge-box-container">
+    <div class="challenge-active" *ngIf="hasActiveChallenge">
+        <header>Ganhe 400xp</header>
+
+        <main>
+            <!--<img src="icons/body.svg" />-->
+            <mat-icon aria-hidden="false" aria-label="Body">body</mat-icon>
+            <strong>Novo desafio</strong>
+            <p>Levante e faça uma caminhada de 3 minutos</p>
+        </main>
+
+        <footer>
+            <button type="button" class="challenge-failed-button">Falhei</button>
+            <button type="button" class="challenge-succeeded-button">Completei</button>
+        </footer>
+    </div>
+    <div class="challenge-not-active" *ngIf="!hasActiveChallenge">
+        <strong>Finalize um ciclo para receber um desafio</strong>
+        <p>
+            <mat-icon aria-hidden="false" aria-label="Level up">keyboard_double_arrow_down</mat-icon>
+            Avance de level completando desafios.
+        </p>
+    </div>
+</div>

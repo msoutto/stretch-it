@@ -11,6 +11,7 @@ import { ExperienceBarComponent } from './experience-bar/experience-bar.componen
 import { ProfileComponent } from './profile/profile.component';
 import { CompletedChallengesComponent } from './completed-challenges/completed-challenges.component';
 import { CountdownComponent } from './countdown/countdown.component';
+import { ChallengeBoxComponent } from './challenge-box/challenge-box.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { CountdownComponent } from './countdown/countdown.component';
     ExperienceBarComponent,
     ProfileComponent,
     CompletedChallengesComponent,
-    CountdownComponent
+    CountdownComponent,
+    ChallengeBoxComponent
   ],
   imports: [
     BrowserModule,
